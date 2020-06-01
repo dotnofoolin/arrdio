@@ -1,6 +1,6 @@
 # Arrdio
 
-A simple page to take a URL and attempt to convert it to MP3.
+A simple app to take a URL and attempt to convert it to MP3.
 
 ## Details
 
