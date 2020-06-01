@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <h2>Arrdio</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <form action='/' method='post'>
+        <fieldset>
+          <label for="url-list">URL List</label>
+            <textarea placeholder="Copy URLs here. One per line." name="url-list" id="url-list"></textarea>
+            <input class="button-primary" type="submit" value="Convert">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="column">
+      <h4>Recently Converted Files</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Download</th>
+            <th>Listen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @current_files.each do |file| %>
+            <tr>
+              <td><%= file.gsub('ready/', '').gsub('.mp3', '') %></td>
+              <td><a href="<%= file %>"><i data-feather="download"></i></a></td>
+              <td><a href="<%= file %>/listen"><i data-feather="headphones"></i></a></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

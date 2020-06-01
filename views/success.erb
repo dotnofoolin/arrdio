@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="column">
+        <h2>Arrdio</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <p>Thanks! Check the output directory or the main page in a bit for your file(s).</p>
+      <ul>
+        <% @url_list.each do |u| %>
+          <li><%= u[:url] %> (Job: <%= u[:job] %>)</li>
+        <% end %>
+      </ul>
+      <a href="/" class="button">Back</a>
+    </div>
+  </div>
+</div>
