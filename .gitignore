@@ -1,2 +1,4 @@
 ready/*.mp3
 .ruby-*
+/tmp/*
+!/tmp/pids/.keep
