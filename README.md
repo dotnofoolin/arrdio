@@ -23,6 +23,10 @@ After checking out the repo, run `bundle install` to install dependencies.
 * Running the jobs: `sidekiq -r ./app.rb`
 * Monitor the jobs through the Sidekiq interface: `http://localhost:4567/sidekiq`
 
+## Deployment
+
+See [DEPLOYMENT](deployment/DEPLOYMENT.md)
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/dotnofoolin/arrdio.
