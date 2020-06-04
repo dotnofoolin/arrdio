@@ -1,0 +1,18 @@
+[Unit]
+Description=arrdio-puma
+After=syslog.target network.target
+
+[Service]
+WorkingDirectory=/home/pi/arrdio
+ExecStart=/bin/bash -lc 'source "/home/pi/.rvm/scripts/rvm" && pumactl -F puma.rb start'
+User=pi
+Group=pi
+UMask=0002
+RestartSec=1
+Restart=on-failure
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=arrdio-puma
+
+[Install]
+WantedBy=multi-user.target
